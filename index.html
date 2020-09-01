@@ -20,7 +20,7 @@
     <input id="base" type="color" name="base" value="#ffc600">
   </div>
 
-  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  <img src="https://picsum.photos/800/500">
 
   <style>
     :root {
@@ -57,17 +57,8 @@
     }
   </style>
 
-  <script>
-    let inputs = document.querySelectorAll('input');
-    function updateVariables() {
-      let dataSizing = this.dataset.sizing || '';
-      document.documentElement.style.setProperty(`--${this.name}`, `${this.value}${dataSizing}`);
-    }
-    inputs.forEach(input => {
-      input.addEventListener('change', updateVariables);
-      input.addEventListener('mousemove', updateVariables);
-    })
-  </script>
+  <script src="main.js" type='module'></script>
+  <script src="updateVariableFunction.js" type='module'></script>
 
 </body>
 
